@@ -1,0 +1,127 @@
+{
+	"name": "vscode-ords",
+	"description": "ORDS SQL/PLSQL Development",
+	"version": "0.0.1",
+	"publisher": "krisrice",
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:ords.runhighlight",
+		"onCommand:ords.runfile",
+		"onView:ordsView"
+	],
+	"main": "./out/ORDSsqlExtention.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ords.runhighlight",
+				"title": "Run via ORDS REST SQL",
+				"category": "ORDS"
+			},
+			{
+				"command": "ords.runfile",
+				"title": "Run File",
+				"category": "ORDS"
+			},
+			{
+				"command": "ordsView.reveal",
+				"title": "ORDS : Reveal"
+			},
+			{
+				"command": "ords.newEntry",
+				"title": "ORDS : New Connection"
+			},
+			{
+				"command": "ords.editEntry",
+				"title": "ORDS : Edit Connection"
+			},
+			{
+				"command": "ords.deleteEntry",
+				"title": "ORDS : Delete Connection"
+			},
+			{
+				"command": "ords.refresh",
+				"title": "ORDS : Refresh Connection"
+			}
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "ordsView",
+					"name": "ORDS View"
+				}
+			]
+		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "ords.newEntry"
+				},
+				{
+					"command": "ords.editEntry"
+				},
+				{
+					"command": "ords.deleteEntry"
+				},
+				{
+					"command": "ords.refresh"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "ORDS  configuration",
+			"properties": {
+				"ords.endpoint": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"title": "URL",
+						"properties": {
+							"label": {
+								"type": "string",
+								"description": "label"
+							},
+							"url": {
+								"type": "string",
+								"description": "url"
+							},
+							"username": {
+								"type": "string",
+								"description": "db username"
+							},
+							"password": {
+								"type": "string",
+								"description": "db password"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"request-promise-native": "^1.0.7",
+		"showdown": "^1.9.1",
+		"vsce": "^1.57.1"
+	},
+	"devDependencies": {
+		"@types/node": "^10.5.2",
+		"tslint": "^5.11.0",
+		"typescript": "^2.9.2",
+		"request": "^2.8",
+		"fs": "0.0.1-security",
+		"colors": "^1.3.3",
+		"vscode": "^1.1.29"
+	}
+}
