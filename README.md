@@ -49,18 +49,7 @@ ref: https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloa
 ```
 {
     "ords.endpoint": [
-        {
-            "url": "https://PDBADMIN:Welcome1_1@dbtools.oraclecorp.com/ords/pdb1/pdbadmin/_/sql",
-            "label": "PDBADMIN@dbtools",
-            "username": "PDBADMIN",
-            "password": "Welcome1_1"
-        },
-        {
-            "url": "https://PDBADMIN:Welcome1_1@10.246.131.41/ords/pdb1/pdbadmin/_/sql",
-            "label": "PDBADMIN@10.246.131.41",
-            "username": "PDBADMIN",
-            "password": "Welcome1_1"
-        },
+
         {
             "url": "http://KLRICE:klrice@localhost:9090/ords/klrice/_/sql",
             "label": "klrice-local",
@@ -77,18 +66,6 @@ ref: https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloa
             "url": "http://localhost:9090/ords/klrice/_/sql",
             "username": "KLRICE",
             "label": "klrice-nopasswd"
-        },
-        {
-            "url": "https://PDBADMIN:Welcome1_1@dbtools.oraclecorp.com/ords/pdb1/pdbadmin/_/sql",
-            "label": "PDBADMIN@dbtools",
-            "username": "PDBADMIN",
-            "password": "Welcome1_1"
-        },
-        {
-            "url": "https://10.246.131.41/ords/pdb1/pdbadmin/_/sql",
-            "label": "PDBADMIN@10.246.131.41",
-            "username": "PDBADMIN",
-            "password": "Welcome1_1"
         },
     ]
 }
